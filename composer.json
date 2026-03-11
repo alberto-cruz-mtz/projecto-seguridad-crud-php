@@ -4,7 +4,7 @@
     "type": "project",
     "autoload": {
         "psr-4": {
-            "Tito\\ProyectoSeguridadCrudPhp\\": "src/"
+            "Tito\\App\\": "src/"
         }
     },
     "authors": [
