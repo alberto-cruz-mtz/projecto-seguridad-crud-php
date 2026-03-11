@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="stylesheet" href="/assets/css/login.css">
+    <title>Login</title>
+</head>
+<body>
+<main id="container">
+    <figure id="logo">
+        <img src="/assets/images/password3.png" alt="Logo">
+    </figure>
+
+    <form id="login-form" action="" method="POST">
+        <div id="header">
+            <h1>¡Bienvenido de nuevo!</h1>
+            <p>Por favor, ingresa tus credenciales para acceder a tu cuenta.</p>
+        </div>
+        <div class="field">
+            <label for="username">Email</label>
+            <input
+                    id="username"
+                    type="email"
+                    name="username"
+                    placeholder="Ingresa tu email"
+                    maxlength="150"
+                    required
+            />
+            <span class="error-message" id="username-error"></span>
+        </div>
+        <div class="field">
+            <label for="password">Password</label>
+            <input
+                    id="password"
+                    type="password"
+                    name="password"
+                    placeholder="Ingresa tu contraseña"
+                    minlength="8"
+                    maxlength="18"
+                    required
+            />
+            <span class="error-message" id="password-error"></span>
+        </div>
+        <button id="btn-submit" type="submit">Iniciar sesión</button>
+        <a id="recovery-password" href="/recovery-password">¿Olvidaste tu contraseña?</a>
+    </form>
+
+</main>
+</body>
+</html>
