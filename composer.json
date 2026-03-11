@@ -1,0 +1,17 @@
+{
+    "name": "tito/proyecto-seguridad-crud-php",
+    "description": "Desarrollar un módulo de seguridad funcional aplicando principios de código seguro, Clean Code y SOLID",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Tito\\ProyectoSeguridadCrudPhp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "jose alberto cruz martinez",
+            "email": "albertocruz8133@proton.me"
+        }
+    ],
+    "require": {}
+}
