@@ -1,5 +1,55 @@
 {
-    "packages": [],
+    "packages": [
+        {
+            "name": "alberto-cruz-mtz/vanilla-router",
+            "version": "v0.1.0",
+            "version_normalized": "0.1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/alberto-cruz-mtz/vanilla-router.git",
+                "reference": "2778a6c80e0bc3acb51afb138f9d79384d7d88c9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/alberto-cruz-mtz/vanilla-router/zipball/2778a6c80e0bc3acb51afb138f9d79384d7d88c9",
+                "reference": "2778a6c80e0bc3acb51afb138f9d79384d7d88c9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1"
+            },
+            "time": "2026-03-12T05:53:10+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Router\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "jose alberto cruz martinez",
+                    "email": "albertocruz8133@proton.me"
+                }
+            ],
+            "description": "Enrutador HTTP inspirado en Express para PHP con tipos estrictos, canalización de middleware y manejo de errores limpio. permitiendo utilizar un enrutador basico sin librerias pesadas",
+            "keywords": [
+                "http",
+                "middleware",
+                "php",
+                "router"
+            ],
+            "support": {
+                "issues": "https://github.com/alberto-cruz-mtz/vanilla-router/issues",
+                "source": "https://github.com/alberto-cruz-mtz/vanilla-router/tree/v0.1.0"
+            },
+            "install-path": "../alberto-cruz-mtz/vanilla-router"
+        }
+    ],
     "dev": true,
     "dev-package-names": []
 }

@@ -11,12 +11,20 @@ class ComposerStaticInit6721f5b08bd249b1cceda786065ab714
         array (
             'Tito\\App\\' => 9,
         ),
+        'R' =>
+        array (
+            'Router\\' => 7,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
         'Tito\\App\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src',
+        ),
+        'Router\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/alberto-cruz-mtz/vanilla-router/src',
         ),
     );
 

@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Tito\\App\\' => array($baseDir . '/src'),
+    'Router\\' => array($vendorDir . '/alberto-cruz-mtz/vanilla-router/src'),
 );
