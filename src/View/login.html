@@ -1,52 +1,61 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="/assets/css/app.css">
-    <link rel="stylesheet" href="/assets/css/login.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/pages/login.css" />
     <title>Login</title>
-</head>
-<body>
-<main id="container">
-    <figure id="logo">
-        <img src="/assets/images/password3.png" alt="Logo">
-    </figure>
+  </head>
+  <body>
+    <main id="container" class="auth-layout">
+      <figure id="logo" class="auth-illustration">
+        <img src="/assets/images/password3.png" alt="Logo" />
+      </figure>
 
-    <form id="login-form">
-        <div id="header">
-            <h1>¡Bienvenido de nuevo!</h1>
-            <p>Por favor, ingresa tus credenciales para acceder a tu cuenta.</p>
+      <form id="login-form" class="auth-form">
+        <div id="header" class="auth-header">
+          <h1>¡Bienvenido de nuevo!</h1>
+          <p>Por favor, ingresa tus credenciales para acceder a tu cuenta.</p>
         </div>
         <div class="field">
-            <label for="username">Email</label>
+          <label for="username">Email</label>
             <input
-                    id="username"
-                    type="email"
-                    name="username"
-                    placeholder="Ingresa tu email"
-                    maxlength="150"
-                    required
+              class="form-control"
+              id="username"
+              type="email"
+              name="username"
+              placeholder="Ingresa tu email"
+              maxlength="150"
+              required
             />
-            <span class="error-message" id="username-error"></span>
+          <span class="error-message" id="username-error"></span>
         </div>
         <div class="field">
-            <label for="password">Password</label>
+          <label for="password">Password</label>
             <input
-                    id="password"
-                    type="password"
-                    name="password"
-                    placeholder="Ingresa tu contraseña"
-                    minlength="8"
-                    maxlength="18"
-                    required
+              class="form-control"
+              id="password"
+              type="password"
+              name="password"
+              placeholder="Ingresa tu contraseña"
+              minlength="8"
+              maxlength="18"
+              required
             />
-            <span class="error-message" id="password-error"></span>
+          <span class="error-message" id="password-error"></span>
         </div>
-        <button id="btn-submit" type="submit">Iniciar sesión</button>
-        <a id="recovery-password" href="/recovery-password">¿Olvidaste tu contraseña?</a>
-    </form>
-</main>
-</body>
-<script src="/assets/js/login.js"></script>
+        <button id="btn-submit" class="btn btn-primary auth-submit" type="submit">Iniciar sesión</button>
+        <a id="recovery-password" class="auth-recovery" href="/recovery-password"
+          >¿Olvidaste tu contraseña?</a
+        >
+      </form>
+    </main>
+
+    <div id="sonner" class="error">
+      <h1 id="sonner-title">Este es un titulo</h1>
+      <p id="sonner-message">Este es un mensaje de aviso</p>
+    </div>
+  </body>
+  <script type="module" src="/assets/js/login.js"></script>
 </html>
