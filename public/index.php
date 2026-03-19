@@ -1,8 +1,8 @@
 <?php
 
 use Router\Router;
+use Tito\App\Controller\AppController;
 use Tito\App\Controller\AuthenticationController;
-use Tito\App\Controller\WelcomeController;
 use Tito\App\Core\Database;
 use Tito\App\Middleware\AuthMiddleware;
 use Tito\App\Service\SessionService;
@@ -26,6 +26,6 @@ $router->get("/", [AuthenticationController::class, "login"]);
 $router->post("/auth/login", [AuthenticationController::class, "authenticate"]);
 $router->post("/auth/logout", [AuthenticationController::class, "logout"]);
 
-$router->get("/dashboard", [WelcomeController::class, "showDashboard"], [$authMiddleware]);
+$router->get("/dashboard", [AppController::class, "showDashboard"], [$authMiddleware]);
 
 $router->dispatch();
