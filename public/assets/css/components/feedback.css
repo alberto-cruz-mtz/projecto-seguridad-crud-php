@@ -1,0 +1,33 @@
+#sonner {
+  position: fixed;
+  top: var(--spacing-4);
+  width: 100%;
+  max-width: 22rem;
+  padding: 0.7rem 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  transform: translate(0%, -50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform var(--transition-slow), opacity var(--transition-slow);
+}
+
+#sonner h1 {
+  font-size: var(--text-base);
+  font-weight: 700;
+}
+
+#sonner p {
+  font-size: var(--text-sm);
+}
+
+#sonner.down {
+  transform: translate(0, 0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#sonner.error {
+  background: linear-gradient(90deg, var(--color-danger-50) 0%, var(--color-white) 100%);
+  color: var(--color-danger-700);
+}

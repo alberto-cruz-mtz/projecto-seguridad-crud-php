@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap");
+
+body {
+  font-family: var(--font-sans), serif;
+  font-size: var(--text-base);
+  line-height: var(--line-height-normal);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--foreground-strong);
+  line-height: var(--line-height-tight);
+}
+
+h1 {
+  font-size: var(--text-3xl);
+}
+
+h2 {
+  font-size: var(--text-2xl);
+}
+
+h3 {
+  font-size: var(--text-xl);
+}
+
+p,
+li,
+a,
+span,
+label,
+input,
+button {
+  font-size: var(--text-base);
+}

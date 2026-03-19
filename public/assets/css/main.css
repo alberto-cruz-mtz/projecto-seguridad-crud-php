@@ -1,0 +1,10 @@
+@layer theme, base, components, pages;
+
+@import "./global/theme.css" layer(theme);
+@import "./global/reset.css" layer(base);
+@import "./global/typography.css" layer(base);
+
+@import "./components/forms.css" layer(components);
+@import "./components/buttons.css" layer(components);
+@import "./components/cards.css" layer(components);
+@import "./components/feedback.css" layer(components);
