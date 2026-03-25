@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesion</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body class="auth-page">
+<main class="auth-shell" aria-labelledby="auth-title">
+    <section class="auth-visual" aria-hidden="true">
+        <h1>Tu panel, en un solo acceso</h1>
+        <p>
+            Inicia sesion para administrar usuarios, roles y permisos de forma segura.
+        </p>
+        <img class="auth-visual-image" src="/assets/images/login-visual.svg" alt="">
+    </section>
+
+    <section class="auth-form-panel" aria-label="Formulario de inicio de sesion">
+        <div id="login-loader" class="auth-form-loader" role="status" aria-live="polite" aria-hidden="true">
+            <span class="auth-spinner" aria-hidden="true"></span>
+            <span class="sr-only">Validando credenciales, espera un momento.</span>
+        </div>
+
+        <form id="login-form" class="auth-form" novalidate>
+            <header class="auth-form-header">
+                <h2 id="auth-title">Bienvenido de vuelta</h2>
+                <p>Ingresa tus credenciales para continuar.</p>
+            </header>
+
+            <div id="auth-alert" class="auth-alert" role="alert" aria-live="assertive"></div>
+
+            <div class="auth-form-body">
+                <div class="form-field">
+                    <label for="email">Correo electronico</label>
+                    <input
+                        id="email"
+                        class="form-control"
+                        name="email"
+                        type="email"
+                        autocomplete="email"
+                        placeholder="correo@empresa.com"
+                    >
+                    <p id="email-error" class="error-message auth-field-error" aria-live="polite"></p>
+                </div>
+
+                <div class="form-field">
+                    <label for="password">Contrasena</label>
+                    <input
+                        id="password"
+                        class="form-control"
+                        name="password"
+                        type="password"
+                        autocomplete="current-password"
+                        placeholder="Minimo 8 caracteres"
+                    >
+                    <p id="password-error" class="error-message auth-field-error" aria-live="polite"></p>
+                </div>
+            </div>
+
+            <div class="auth-form-actions">
+                <button id="submit-login" class="btn btn-primary" type="submit">Iniciar sesion</button>
+                <p class="auth-reset-text">
+                    Olvidaste tu contrasena?
+                    <a class="auth-reset-link" href="/password-reset/request">Restablecer contrasena</a>
+                </p>
+            </div>
+        </form>
+    </section>
+</main>
+
+<script type="module" src="/assets/js/login/index.js"></script>
+</body>
+</html>

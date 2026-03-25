@@ -1,18 +1,16 @@
 <?php
 
-namespace Tito\App\Entity;
+declare(strict_types=1);
 
-class Role
+namespace Tito\CrudUsers\Entity;
+
+final class Role
 {
-    private int $id;
-    private RoleName $name;
-    private string $description;
-
-    public function __construct(int $id, RoleName $name, string $description)
-    {
-        $this->id = $id;
-        $this->name = $name;
-        $this->description = $description;
+    public function __construct(
+        private int $id,
+        private string $name,
+        private ?string $description,
+    ) {
     }
 
     public function getId(): int
@@ -20,29 +18,23 @@ class Role
         return $this->id;
     }
 
-    public function setId(int $id): void
-    {
-        $this->id = $id;
-    }
-
-    public function getName(): RoleName
+    public function getName(): string
     {
         return $this->name;
     }
 
-    public function setName(RoleName $name): void
-    {
-        $this->name = $name;
-    }
-
-    public function getDescription(): string
+    public function getDescription(): ?string
     {
         return $this->description;
     }
 
-    public function setDescription(string $description): void
+    /** @return array<string, int|string|null> */
+    public function toArray(): array
     {
-        $this->description = $description;
+        return [
+            'id' => $this->id,
+            'name' => $this->name,
+            'description' => $this->description,
+        ];
     }
-
 }

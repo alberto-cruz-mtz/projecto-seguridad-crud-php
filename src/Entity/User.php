@@ -1,35 +1,29 @@
 <?php
 
-namespace Tito\App\Entity;
+declare(strict_types=1);
 
-use Tito\App\Core\UUID;
+namespace Tito\CrudUsers\Entity;
 
-class User
+final class User
 {
-    private UUID $id;
-    private string $fullName;
-    private string $email;
-    private string $passwordHash;
-
-    private Role $role;
-
-    public function __construct(UUID $id, string $fullName, string $email, string $passwordHash, Role $role)
-    {
-        $this->id = $id;
-        $this->fullName = $fullName;
-        $this->email = $email;
-        $this->passwordHash = $passwordHash;
-        $this->role = $role;
+    public function __construct(
+        private string $id,
+        private string $email,
+        private string $password,
+        private int $roleId,
+        private ?Role $role = null,
+        private ?Person $person = null,
+    ) {
     }
 
-    public function getId(): UUID
+    public function getId(): string
     {
         return $this->id;
     }
 
-    public function getFullName(): string
+    public function setId(string $id): void
     {
-        return $this->fullName;
+        $this->id = $id;
     }
 
     public function getEmail(): string
@@ -37,13 +31,56 @@ class User
         return $this->email;
     }
 
-    public function getPasswordHash(): string
+    public function getPassword(): string
     {
-        return $this->passwordHash;
+        return $this->password;
     }
 
-    public function getRole(): Role
+    public function setPassword(string $password): void
+    {
+        $this->password = $password;
+    }
+
+    public function getRoleId(): int
+    {
+        return $this->roleId;
+    }
+
+    public function getRole(): ?Role
     {
         return $this->role;
+    }
+
+    public function setRole(?Role $role): void
+    {
+        $this->role = $role;
+    }
+
+    public function getPerson(): ?Person
+    {
+        return $this->person;
+    }
+
+    public function setPerson(?Person $person): void
+    {
+        $this->person = $person;
+    }
+
+    /** @return array<string, mixed> */
+    public function toArray(bool $includePassword = false): array
+    {
+        $payload = [
+            'id' => $this->id,
+            'email' => $this->email,
+            'role_id' => $this->roleId,
+            'role' => $this->role?->toArray(),
+            'person' => $this->person?->toArray(),
+        ];
+
+        if ($includePassword) {
+            $payload['password'] = $this->password;
+        }
+
+        return $payload;
     }
 }

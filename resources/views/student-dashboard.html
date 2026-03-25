@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Estudiante</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body class="dashboard-page">
+<div class="dashboard-shell">
+    <aside class="dashboard-sidebar" aria-label="Menu principal">
+        <header class="sidebar-header">
+            <div class="sidebar-avatar" aria-hidden="true">ST</div>
+            <div class="sidebar-profile-text">
+                <p class="sidebar-role">Estudiante</p>
+                <p id="sidebar-user-email" class="sidebar-email">Cargando...</p>
+            </div>
+        </header>
+
+        <nav class="sidebar-nav" aria-label="Navegacion dashboard">
+            <a class="sidebar-link is-active" href="#panel-configuracion">Configuracion</a>
+        </nav>
+
+        <footer class="sidebar-footer">
+            <button id="logout-button" class="btn btn-outline-danger" type="button">Cerrar sesion</button>
+        </footer>
+    </aside>
+
+    <main class="dashboard-main" aria-live="polite">
+        <section class="dashboard-summary card">
+            <h1 class="card-title">Panel de estudiante</h1>
+            <p class="card-subtitle">Informacion general del usuario autenticado.</p>
+
+            <dl class="summary-grid">
+                <div>
+                    <dt>Correo</dt>
+                    <dd id="summary-email">-</dd>
+                </div>
+                <div>
+                    <dt>Rol</dt>
+                    <dd id="summary-role">-</dd>
+                </div>
+                <div>
+                    <dt>ID de usuario</dt>
+                    <dd id="summary-id">-</dd>
+                </div>
+            </dl>
+        </section>
+
+        <section class="dashboard-panel card">
+            <header class="panel-header">
+                <h2 class="card-title">Pagos de la semana</h2>
+                <p class="card-subtitle">Datos estaticos de referencia para visualizacion del estudiante.</p>
+            </header>
+
+            <div class="table-wrap">
+                <table class="dashboard-table" aria-label="Tabla de pagos">
+                    <thead>
+                    <tr>
+                        <th>Concepto</th>
+                        <th>Semana</th>
+                        <th>Fecha</th>
+                        <th>Monto</th>
+                        <th>Estado</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Matricula semanal</td>
+                        <td>Semana 18</td>
+                        <td>2026-05-03</td>
+                        <td>S/ 120.00</td>
+                        <td>Pagado</td>
+                    </tr>
+                    <tr>
+                        <td>Laboratorio</td>
+                        <td>Semana 18</td>
+                        <td>2026-05-04</td>
+                        <td>S/ 35.00</td>
+                        <td>Pagado</td>
+                    </tr>
+                    <tr>
+                        <td>Material academico</td>
+                        <td>Semana 18</td>
+                        <td>2026-05-05</td>
+                        <td>S/ 18.50</td>
+                        <td>Pendiente</td>
+                    </tr>
+                    <tr>
+                        <td>Actividad extracurricular</td>
+                        <td>Semana 18</td>
+                        <td>2026-05-06</td>
+                        <td>S/ 22.00</td>
+                        <td>Pagado</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="panel-configuracion" class="dashboard-panel card">
+            <h2 class="card-title">Configuracion</h2>
+            <p class="card-subtitle">Preferencias estaticas para decoracion de la vista.</p>
+            <div class="placeholder-block">
+                <p>Idioma del campus: Espanol.</p>
+                <p>Zona horaria: America/Lima.</p>
+                <p>Notificaciones de pago: habilitadas.</p>
+                <p>Canal de soporte: soporte-estudiantes@instituto.edu.</p>
+            </div>
+        </section>
+    </main>
+</div>
+
+<div id="dashboard-feedback" class="dashboard-feedback" role="status" aria-live="polite"></div>
+
+<script type="module" src="/assets/js/student-dashboard/index.js"></script>
+</body>
+</html>
