@@ -1,0 +1,41 @@
+export function getDashboardDom() {
+  return {
+    sidebarButtons: Array.from(document.querySelectorAll("[data-panel-target]")),
+    panels: Array.from(document.querySelectorAll("[data-panel]")),
+    logoutButton: document.getElementById("logout-button"),
+    feedback: document.getElementById("dashboard-feedback"),
+    sidebarUserEmail: document.getElementById("sidebar-user-email"),
+    summary: {
+      email: document.getElementById("summary-email"),
+      role: document.getElementById("summary-role"),
+      id: document.getElementById("summary-id"),
+    },
+    users: {
+      form: document.getElementById("user-form"),
+      id: document.getElementById("user-id"),
+      email: document.getElementById("user-email"),
+      password: document.getElementById("user-password"),
+      roleId: document.getElementById("user-role"),
+      firstName: document.getElementById("user-first-name"),
+      lastName: document.getElementById("user-last-name"),
+      age: document.getElementById("user-age"),
+      address: document.getElementById("user-address"),
+      phoneNumber: document.getElementById("user-phone"),
+      gender: document.getElementById("user-gender"),
+      submitButton: document.getElementById("user-submit"),
+      cancelButton: document.getElementById("user-cancel"),
+      tableBody: document.getElementById("users-table-body"),
+    },
+    payments: {
+      form: document.getElementById("payment-form"),
+      id: document.getElementById("payment-id"),
+      studentId: document.getElementById("payment-student-id"),
+      weekNumber: document.getElementById("payment-week-number"),
+      amount: document.getElementById("payment-amount"),
+      paymentDate: document.getElementById("payment-date"),
+      submitButton: document.getElementById("payment-submit"),
+      cancelButton: document.getElementById("payment-cancel"),
+      tableBody: document.getElementById("payments-table-body"),
+    },
+  };
+}

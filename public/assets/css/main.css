@@ -8,3 +8,7 @@
 @import "./components/buttons.css" layer(components);
 @import "./components/cards.css" layer(components);
 @import "./components/feedback.css" layer(components);
+@import "./pages/login.css" layer(pages);
+@import "./pages/password-reset-request.css" layer(pages);
+@import "./pages/password-reset.css" layer(pages);
+@import "./pages/dashboard.css" layer(pages);
