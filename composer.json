@@ -1,20 +1,22 @@
 {
-  "name": "tito/proyecto-seguridad-crud-php",
-  "description": "Desarrollar un módulo de seguridad funcional aplicando principios de código seguro, Clean Code y SOLID",
-  "type": "project",
-  "autoload": {
-    "psr-4": {
-      "Tito\\App\\": "src/"
-    }
-  },
-  "authors": [
-    {
-      "name": "jose alberto cruz martinez",
-      "email": "albertocruz8133@proton.me"
-    }
-  ],
-  "require": {
-    "alberto-cruz-mtz/vanilla-router": "^0.1.0",
-    "ext-pdo": "*"
-  }
+    "name": "tito/crud-users",
+    "description": "CRUD de usuarios con arquitectura MVC",
+    "type": "project",
+    "require": {
+        "alberto-cruz-mtz/vanilla-router": "dev-main",
+        "phpmailer/phpmailer": "dev-master"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Tito\\CrudUsers\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "jose alberto cruz martinez",
+            "email": "albertocruz8133@proton.me"
+        }
+    ],
+    "minimum-stability": "dev"
 }

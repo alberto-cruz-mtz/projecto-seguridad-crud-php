@@ -6,6 +6,7 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Tito\\App\\' => array($baseDir . '/src'),
+    'Tito\\CrudUsers\\' => array($baseDir . '/src'),
     'Router\\' => array($vendorDir . '/alberto-cruz-mtz/vanilla-router/src'),
+    'PHPMailer\\PHPMailer\\' => array($vendorDir . '/phpmailer/phpmailer/src'),
 );

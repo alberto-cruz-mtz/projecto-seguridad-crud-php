@@ -4,21 +4,25 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit6721f5b08bd249b1cceda786065ab714
+class ComposerStaticInitc08032aad3ab184b3f0cb7761e6d42dd
 {
     public static $prefixLengthsPsr4 = array (
         'T' =>
         array (
-            'Tito\\App\\' => 9,
+            'Tito\\CrudUsers\\' => 15,
         ),
         'R' =>
         array (
             'Router\\' => 7,
         ),
+        'P' =>
+        array (
+            'PHPMailer\\PHPMailer\\' => 20,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Tito\\App\\' =>
+        'Tito\\CrudUsers\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
@@ -26,18 +30,68 @@ class ComposerStaticInit6721f5b08bd249b1cceda786065ab714
         array (
             0 => __DIR__ . '/..' . '/alberto-cruz-mtz/vanilla-router/src',
         ),
+        'PHPMailer\\PHPMailer\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
+        ),
     );
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'PHPMailer\\PHPMailer\\DSNConfigurator' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/DSNConfigurator.php',
+        'PHPMailer\\PHPMailer\\Exception' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/Exception.php',
+        'PHPMailer\\PHPMailer\\OAuth' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/OAuth.php',
+        'PHPMailer\\PHPMailer\\OAuthTokenProvider' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/OAuthTokenProvider.php',
+        'PHPMailer\\PHPMailer\\PHPMailer' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/PHPMailer.php',
+        'PHPMailer\\PHPMailer\\POP3' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/POP3.php',
+        'PHPMailer\\PHPMailer\\SMTP' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/SMTP.php',
+        'Router\\Contracts\\ErrorHandlerInterface' => __DIR__ . '/..' . '/alberto-cruz-mtz/vanilla-router/src/Contracts/ErrorHandlerInterface.php',
+        'Router\\Contracts\\MiddlewareInterface' => __DIR__ . '/..' . '/alberto-cruz-mtz/vanilla-router/src/Contracts/MiddlewareInterface.php',
+        'Router\\Contracts\\UserResolverInterface' => __DIR__ . '/..' . '/alberto-cruz-mtz/vanilla-router/src/Contracts/UserResolverInterface.php',
+        'Router\\Exceptions\\HttpException' => __DIR__ . '/..' . '/alberto-cruz-mtz/vanilla-router/src/Exceptions/HttpException.php',
+        'Router\\Middleware\\DefaultErrorHandler' => __DIR__ . '/..' . '/alberto-cruz-mtz/vanilla-router/src/Middleware/DefaultErrorHandler.php',
+        'Router\\Request' => __DIR__ . '/..' . '/alberto-cruz-mtz/vanilla-router/src/Request.php',
+        'Router\\Response' => __DIR__ . '/..' . '/alberto-cruz-mtz/vanilla-router/src/Response.php',
+        'Router\\Route' => __DIR__ . '/..' . '/alberto-cruz-mtz/vanilla-router/src/Route.php',
+        'Router\\Router' => __DIR__ . '/..' . '/alberto-cruz-mtz/vanilla-router/src/Router.php',
+        'Router\\Security\\AuthenticatedUser' => __DIR__ . '/..' . '/alberto-cruz-mtz/vanilla-router/src/Security/AuthenticatedUser.php',
+        'Router\\Security\\RuleBuilder' => __DIR__ . '/..' . '/alberto-cruz-mtz/vanilla-router/src/Security/RuleBuilder.php',
+        'Router\\Security\\SecurityChain' => __DIR__ . '/..' . '/alberto-cruz-mtz/vanilla-router/src/Security/SecurityChain.php',
+        'Router\\Security\\SecurityRule' => __DIR__ . '/..' . '/alberto-cruz-mtz/vanilla-router/src/Security/SecurityRule.php',
+        'Tito\\CrudUsers\\Controller\\AuthenticationController' => __DIR__ . '/../..' . '/src/Controller/AuthenticationController.php',
+        'Tito\\CrudUsers\\Controller\\UserController' => __DIR__ . '/../..' . '/src/Controller/UserController.php',
+        'Tito\\CrudUsers\\Core\\Application' => __DIR__ . '/../..' . '/src/Core/Application.php',
+        'Tito\\CrudUsers\\Core\\Config' => __DIR__ . '/../..' . '/src/Core/Config.php',
+        'Tito\\CrudUsers\\Core\\Database' => __DIR__ . '/../..' . '/src/Core/Database.php',
+        'Tito\\CrudUsers\\Core\\TokenUtility' => __DIR__ . '/../..' . '/src/Core/TokenUtility.php',
+        'Tito\\CrudUsers\\Core\\UUID' => __DIR__ . '/../..' . '/src/Core/UUID.php',
+        'Tito\\CrudUsers\\DTO\\CreateUserRequestDTO' => __DIR__ . '/../..' . '/src/DTO/CreateUserRequestDTO.php',
+        'Tito\\CrudUsers\\DTO\\LoginRequestDTO' => __DIR__ . '/../..' . '/src/DTO/LoginRequestDTO.php',
+        'Tito\\CrudUsers\\DTO\\PasswordResetConfirmDTO' => __DIR__ . '/../..' . '/src/DTO/PasswordResetConfirmDTO.php',
+        'Tito\\CrudUsers\\DTO\\PasswordResetRequestDTO' => __DIR__ . '/../..' . '/src/DTO/PasswordResetRequestDTO.php',
+        'Tito\\CrudUsers\\DTO\\UpdateUserRequestDTO' => __DIR__ . '/../..' . '/src/DTO/UpdateUserRequestDTO.php',
+        'Tito\\CrudUsers\\Entity\\Person' => __DIR__ . '/../..' . '/src/Entity/Person.php',
+        'Tito\\CrudUsers\\Entity\\Role' => __DIR__ . '/../..' . '/src/Entity/Role.php',
+        'Tito\\CrudUsers\\Entity\\User' => __DIR__ . '/../..' . '/src/Entity/User.php',
+        'Tito\\CrudUsers\\Exception\\AuthenticationException' => __DIR__ . '/../..' . '/src/Exception/AuthenticationException.php',
+        'Tito\\CrudUsers\\Exception\\NotFoundException' => __DIR__ . '/../..' . '/src/Exception/NotFoundException.php',
+        'Tito\\CrudUsers\\Exception\\ValidationException' => __DIR__ . '/../..' . '/src/Exception/ValidationException.php',
+        'Tito\\CrudUsers\\Repository\\PdoUserRepository' => __DIR__ . '/../..' . '/src/Repository/PdoUserRepository.php',
+        'Tito\\CrudUsers\\Repository\\UserRepositoryInterface' => __DIR__ . '/../..' . '/src/Repository/UserRepositoryInterface.php',
+        'Tito\\CrudUsers\\Service\\AuthenticationService' => __DIR__ . '/../..' . '/src/Service/AuthenticationService.php',
+        'Tito\\CrudUsers\\Service\\Mail\\MailerInterface' => __DIR__ . '/../..' . '/src/Service/Mail/MailerInterface.php',
+        'Tito\\CrudUsers\\Service\\Mail\\NullMailer' => __DIR__ . '/../..' . '/src/Service/Mail/NullMailer.php',
+        'Tito\\CrudUsers\\Service\\Mail\\PhpMailerService' => __DIR__ . '/../..' . '/src/Service/Mail/PhpMailerService.php',
+        'Tito\\CrudUsers\\Service\\Session\\SessionManager' => __DIR__ . '/../..' . '/src/Service/Session/SessionManager.php',
+        'Tito\\CrudUsers\\Service\\UserService' => __DIR__ . '/../..' . '/src/Service/UserService.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit6721f5b08bd249b1cceda786065ab714::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit6721f5b08bd249b1cceda786065ab714::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit6721f5b08bd249b1cceda786065ab714::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitc08032aad3ab184b3f0cb7761e6d42dd::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitc08032aad3ab184b3f0cb7761e6d42dd::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitc08032aad3ab184b3f0cb7761e6d42dd::$classMap;
 
         }, null, ClassLoader::class);
     }

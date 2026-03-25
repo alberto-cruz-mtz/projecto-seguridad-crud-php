@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
-        'name' => 'tito/proyecto-seguridad-crud-php',
-        'pretty_version' => 'dev-main',
-        'version' => 'dev-main',
-        'reference' => '77247238019dc820805879506c72583f56b06e2b',
+        'name' => 'tito/crud-users',
+        'pretty_version' => '1.0.0+no-version-set',
+        'version' => '1.0.0.0',
+        'reference' => null,
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,18 +11,31 @@
     ),
     'versions' => array(
         'alberto-cruz-mtz/vanilla-router' => array(
-            'pretty_version' => 'v0.1.0',
-            'version' => '0.1.0.0',
-            'reference' => '2778a6c80e0bc3acb51afb138f9d79384d7d88c9',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../alberto-cruz-mtz/vanilla-router',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
-        'tito/proyecto-seguridad-crud-php' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '77247238019dc820805879506c72583f56b06e2b',
+            'reference' => '631c6973cb9acfc0afeec445592699b302084d0e',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../alberto-cruz-mtz/vanilla-router',
+            'aliases' => array(
+                0 => '9999999-dev',
+            ),
+            'dev_requirement' => false,
+        ),
+        'phpmailer/phpmailer' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => '525d3936066ab826810c57de49092757ede0b459',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../phpmailer/phpmailer',
+            'aliases' => array(
+                0 => '9999999-dev',
+            ),
+            'dev_requirement' => false,
+        ),
+        'tito/crud-users' => array(
+            'pretty_version' => '1.0.0+no-version-set',
+            'version' => '1.0.0.0',
+            'reference' => null,
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
