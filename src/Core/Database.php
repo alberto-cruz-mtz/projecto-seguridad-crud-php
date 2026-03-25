@@ -1,6 +1,8 @@
 <?php
 
-namespace Tito\App\Core;
+declare(strict_types=1);
+
+namespace Tito\CrudUsers\Core;
 
 use PDO;
 use PDOException;
